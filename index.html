@@ -3,14 +3,50 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hola</title>
+        <title>Peso en otros Planetas</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="">
+        <style>
+            body{
+                background-image: url('https://cnnespanol.cnn.com/wp-content/uploads/2022/02/planeta-proxima-d-exoplanet-exlarge-169.jpeg?quality=100&strip=info');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
     <body>
-        <h2>Hola mundo que tal</h2>
-        <p>esta es una nueva pagina web para practicar creada desde ubuntu</p>
-        <h3>HOla que tal como estan</h3>
+        <div class="container mt-4">
+            <div class="border m-4 postion-relative">
+                <div class="card  position-absolute top-50 start-50 translate-middle rounded shadow" >
+                    <img class="card-img-top img-fluid d-block mx-auto"  src="img/cardimage (1).svg" alt="Usuario"/>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Averigua tu peso en otros planetas</h5>
+                        <form id="Pesos">
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Peso en Kilogramos</span>
+                                <input id="peso" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <h5 class="card-title fw-bold">Selecciona el planeta destino</h5>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="planeta" id="marte" value="3.7">
+                                <label class="form-check-label" for="marte">Marte</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="planeta" id="jupiter" value="24.8">
+                                <label class="form-check-label" for="jupiter">Jupiter</label>
+                            </div>
+                            <h5 class="card-title fw-bold">Resultado:</h5>
+                            <p id="resultado"  class="card-text"></p>
+                        </form>
+                            <button class="btn btn-danger" onclick="conversion()"  id="enviar" type="submit">Calcular</button>
+                            <button class="btn btn-primary" onclick="reset()"  id="clear" type="submit">Borrar</button>
+                    </div>
+                    <script type="text/javascript" src="./logica.js"></script>
+                </div>
+            </div>
+        </div>
+       
     </body>
 </html>
