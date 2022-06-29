@@ -22,5 +22,6 @@ const conversion = () => {
 
 }
 const reset = () => {
+    document.getElementById('resultado').innerHTML = "";
     document.getElementById('Pesos').reset();
 }
