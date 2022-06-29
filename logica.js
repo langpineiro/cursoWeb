@@ -18,7 +18,7 @@ const conversion = () => {
     console.log("me trae del checkbox =>",selectorInput);
     let PlanetaValor = parseFloat(selectorInput);
     let resultadoFinal = (peso* PlanetaValor)/tierra;
-    document.getElementById('resultado').innerHTML = `El peso en ${planetSelected} es de  ${resultadoFinal.toFixed(2)}`;
+    document.getElementById('resultado').innerHTML = `Tu peso en ${planetSelected} es de  ${resultadoFinal.toFixed(2)} Kilogramos`;
 
 }
 const reset = () => {
